@@ -70,14 +70,6 @@ def register():
                                    success=False,
                                    form=create_account_form)
 
-        # Check name exists
-        # user = Users.query.filter_by(name=name).first()
-        # if user:
-        #     return render_template('accounts/register.html',
-        #                            msg='name already registered',
-        #                            success=False,
-        #                            form=create_account_form)
-
         # else we can create the user
         user = Users(**request.form)
         db.session.add(user)

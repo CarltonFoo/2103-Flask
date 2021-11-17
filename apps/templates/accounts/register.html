@@ -30,13 +30,7 @@
 								<form role="form" method="post" action="">
 
 									{{ form.hidden_tag() }}  
-															
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text"><i class="feather icon-user"></i></span>
-										</div>
-										{{ form.name(placeholder="Name", class="form-control") }}
-									</div>
+										
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="feather icon-user"></i></span>
@@ -49,12 +43,30 @@
 										</div>
 										{{ form.password(placeholder="Password", class="form-control", type="password") }}
 									</div>
-									<div class="form-group text-left mt-2">
+
+									<div class="input-group mb-3">
+										<div class="form-group">
+                                            <label for="exampleFormControlSelect1">Example select</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="feather icon-user"></i></span>
+										</div>
+										{{ form.gender(placeholder="Gender", class="input form-control") }}
+									</div>
+
+									<!-- <div class="form-group text-left mt-2">
 										<div class="checkbox checkbox-primary d-inline">
 											<input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2">
 											<label for="checkbox-fill-2" class="cr">I agree with <a href="#">terms</a>.</label>
 										</div>
-									</div>
+									</div> -->
 									<button type="submit" name="register" class="btn btn-primary btn-block mb-4">Sign up</button>
 								
 								</form>

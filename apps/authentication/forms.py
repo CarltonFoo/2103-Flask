@@ -20,9 +20,6 @@ class LoginForm(FlaskForm):
 
 
 class CreateAccountForm(FlaskForm):    
-    name = TextField('Name',
-                      id='name_create',
-                      validators=[DataRequired()])
     username = TextField('Username',
                          id='username_create',
                          validators=[DataRequired()])

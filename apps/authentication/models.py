@@ -1,8 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from flask_login import UserMixin
 
 from apps import db, login_manager
@@ -14,9 +9,15 @@ class Users(db.Model, UserMixin):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), unique=True)
-    username = db.Column(db.String(64), unique=True)
-    password = db.Column(db.String(128))
+    username = db.Column(db.String(255), unique=True)
+    password = db.Column(db.String(255))
+    gender = db.Column(db.String(1))
+    age = db.Column(db.Integer)
+    height = db.Column(db.Float)
+    weight = db.Column(db.Float)
+    dietryNeeds = db.Column(db.String(128))
+    profileBio = db.Column(db.Text)
+    
 
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
