@@ -5,7 +5,7 @@
         <div class="m-header">
             <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
             <a href="#!" class="b-brand">
-                <strong style="font-size: 24px"> Bolt </strong>
+                <strong style="font-size: 24px"> SmartPantry </strong>
                 <!-- <img src="/static/assets/images/logo.png" alt="" class="logo">
                 <img src="/static/assets/images/logo-icon.png" alt="" class="logo-thumb"> -->
             </a>
@@ -15,6 +15,11 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
+                <!-- 
+                <li>
+                    MySQL <-> NoSQL
+                </li>
+                -->
                 <li>
                     <div class="dropdown drp-user">
                         <a href="#!" class="dropdown-toggle" data-toggle="dropdown">
@@ -31,7 +36,7 @@
                                 </a>
                             </div>
                             <ul class="pro-body">
-                                <li><a href="#" class="dropdown-item"><i class="feather icon-user"></i> Profile - {{ current_user.username }} </a></li>
+                                <li><a href="/profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile - {{ current_user.username }} </a></li>
                             </ul>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ from apps.authentication.util import hash_pass
 
 class Users(db.Model, UserMixin):
 
-    __tablename__ = 'users'
+    __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), unique=True)
@@ -15,8 +15,8 @@ class Users(db.Model, UserMixin):
     age = db.Column(db.Integer)
     height = db.Column(db.Float)
     weight = db.Column(db.Float)
-    dietryNeeds = db.Column(db.String(128))
-    profileBio = db.Column(db.Text)
+    dietary_needs = db.Column(db.String(255))
+    profile_bio = db.Column(db.String(255))
     
 
     def __init__(self, **kwargs):

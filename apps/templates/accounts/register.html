@@ -30,36 +30,63 @@
 								<form role="form" method="post" action="">
 
 									{{ form.hidden_tag() }}  
-										
+									<!-- Username -->
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="feather icon-user"></i></span>
 										</div>
-										{{ form.username(placeholder="Username", class="input form-control") }}
+										{{ form.username(placeholder="Username*", class="input form-control") }}
 									</div>
-									<div class="input-group mb-4">
+									<!-- Password -->
+									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="feather icon-lock"></i></span>
 										</div>
-										{{ form.password(placeholder="Password", class="form-control", type="password") }}
+										{{ form.password(placeholder="Password*", class="form-control", type="password") }}
 									</div>
-
+									<!-- Gender -->
 									<div class="input-group mb-3">
-										<div class="form-group">
-                                            <label for="exampleFormControlSelect1">Example select</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
 										<div class="input-group-prepend">
-											<span class="input-group-text"><i class="feather icon-user"></i></span>
+											<span class="input-group-text"><i class="bi-gender-ambiguous"></i></span>
 										</div>
 										{{ form.gender(placeholder="Gender", class="input form-control") }}
 									</div>
+									<!-- Age -->
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="bi-person-bounding-box"></i></span>
+										</div>
+										{{ form.age(placeholder="Age", class="input form-control") }}
+									</div>
+									<!-- Height -->
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="bi-grip-vertical"></i></span>
+										</div>
+										{{ form.height(placeholder="Height", class="input form-control") }}
+									</div>
+									<!-- Weight -->
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="bi-grip-horizontal"></i></span>
+										</div>
+										{{ form.weight(placeholder="Weight", class="input form-control") }}
+									</div>
+									<!-- Dietary Needs -->
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="bi-activity"></i></span>
+										</div>
+										{{ form.dietary_needs(placeholder="Dietary Needs", class="input form-control") }}
+									</div>
+									<!-- Profile Bio -->
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="bi-person-lines-fill"></i></span>
+										</div>
+										{{ form.profile_bio(placeholder="Profile Bio", class="input form-control") }}
+									</div>
+
 
 									<!-- <div class="form-group text-left mt-2">
 										<div class="checkbox checkbox-primary d-inline">
